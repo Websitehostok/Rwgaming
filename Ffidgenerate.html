@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire ID Generator - Premium Account Access</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff6a00;
+            --primary-dark: #e55a00;
+            --secondary: #1a1a2e;
+            --accent: #00a8ff;
+            --light-bg: #0f0f1a;
+            --dark-bg: #0a0a12;
+            --card-bg: #151522;
+            --text-light: #ffffff;
+            --text-gray: #b0b0b0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--dark-bg) 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        .gaming-font {
+            font-family: 'Oxanium', cursive;
+        }
+        
+        .navbar {
+            background: rgba(10, 10, 18, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 106, 0, 0.2);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary) !important;
+            font-size: 1.8rem;
+            text-shadow: 0 0 10px rgba(255, 106, 0, 0.5);
+        }
+        
+        .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary) !important;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .hero-section {
+            background: url('https://i.postimg.cc/1tzWpDK4/free-fire-gameloop-FF-1-1.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            padding: 150px 0 100px;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .hero-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 10, 18, 0.9) 0%, rgba(255, 106, 0, 0.2) 100%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--text-gray);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 15px;
+            background: var(--card-bg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 106, 0, 0.2);
+        }
+        
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-title {
+            color: var(--text-light);
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .card-text {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border: none;
+            padding: 12px 25px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(255, 106, 0, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 106, 0, 0.4);
+        }
+        
+        .btn-primary:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn-primary:hover:after {
+            left: 100%;
+        }
+        
+        .features-section {
+            padding: 100px 0;
+            background: var(--dark-bg);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .feature-text {
+            color: var(--text-gray);
+        }
+        
+        .footer {
+            background: var(--secondary);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 106, 0, 0.2);
+        }
+        
+        .footer h5 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer p, .footer a {
+            color: var(--text-gray);
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--card-bg);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .modal-content {
+            border-radius: 15px;
+            border: none;
+            background: var(--card-bg);
+            color: var(--text-light);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-header {
+            background: var(--secondary);
+            border-bottom: 1px solid rgba(255, 106, 0, 0.2);
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            padding: 20px 25px;
+        }
+        
+        .modal-title {
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .btn-close {
+            filter: invert(1);
+        }
+        
+        .credential-box {
+            background: rgba(10, 10, 18, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .credential-label {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        .credential-value {
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            word-break: break-all;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .task-box {
+            background: rgba(255, 106, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid rgba(255, 106, 0, 0.2);
+            text-align: center;
+        }
+        
+        .task-box h5 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .task-box p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+        
+        .btn-telegram {
+            background: #0088cc;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-telegram:hover {
+            background: #0077b5;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.4);
+            color: white;
+        }
+        
+        .loading-dots {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+        
+        .loading-dots div {
+            position: absolute;
+            top: 33px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--primary);
+            animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        }
+        
+        .loading-dots div:nth-child(1) {
+            left: 8px;
+            animation: loading-dots1 0.6s infinite;
+        }
+        
+        .loading-dots div:nth-child(2) {
+            left: 8px;
+            animation: loading-dots2 0.6s infinite;
+        }
+        
+        .loading-dots div:nth-child(3) {
+            left: 32px;
+            animation: loading-dots2 0.6s infinite;
+        }
+        
+        .loading-dots div:nth-child(4) {
+            left: 56px;
+            animation: loading-dots3 0.6s infinite;
+        }
+        
+        @keyframes loading-dots1 {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes loading-dots3 {
+            0% { transform: scale(1); }
+            100% { transform: scale(0); }
+        }
+        
+        @keyframes loading-dots2 {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(24px, 0); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 106, 0, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 106, 0, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 106, 0, 0);
+            }
+        }
+        
+        .step-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+        
+        .step-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+        
+        /* Hidden Admin Panel */
+        #adminPanel {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand gaming-font" href="#"><i class="fas fa-fire me-2"></i>FreeFire ID Generator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ids">Free IDs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title gaming-font">Premium Free Fire ID Generator</h1>
+                <p class="hero-subtitle">Get access to exclusive Free Fire accounts with rare skins, weapons, and diamonds</p>
+                <a href="#ids" class="btn btn-primary btn-lg pulse"><i class="fas fa-key me-2"></i>Generate IDs Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Fire IDs Section -->
+    <section id="ids" class="py-5">
+        <div class="container">
+            <h2 class="section-title gaming-font">Available Free Fire IDs</h2>
+            <div class="row" id="freeFireCards">
+                <!-- Cards will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title gaming-font">Why Choose Our Generator</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-5">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="feature-title">Secure Generation</h4>
+                    <p class="feature-text">Our advanced system generates secure and unique credentials for each account with military-grade encryption.</p>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4 class="feature-title">Instant Access</h4>
+                    <p class="feature-text">Get immediate access to premium Free Fire accounts with just one click. No waiting, no delays.</p>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h4 class="feature-title">Verified Accounts</h4>
+                    <p class="feature-text">All Free Fire IDs are thoroughly verified and tested to ensure they work perfectly with no issues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-5">
+    <div class="container">
+        <h2 class="section-title gaming-font">Frequently Asked Questions</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                How does the ID generation work?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Our system connects to our secure database of premium Free Fire accounts and generates unique, working credentials for you to use immediately after completing a simple verification task.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                Are these accounts safe to use?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, all accounts are thoroughly tested and verified to ensure they are safe and comply with Free Fire's terms of service. We regularly update our database to maintain security.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                Why do I need to complete a task on Telegram?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The task verification helps us prevent abuse and ensure that our premium accounts are only accessed by genuine Free Fire players. It's a simple process that takes just a few minutes.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="gaming-font"><i class="fas fa-fire me-2"></i>FreeFire ID Generator</h5>
+                    <p>Providing premium Free Fire accounts to players worldwide since 2020.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#ids">Free IDs</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-envelope me-2"></i> insightimaginary@gmail.com</p>
+                    <p><i class="fas fa-globe me-2"></i> Have A Nice Day😊</p>
+                    <p class="small text-muted mt-3">This website is not affiliated with Garena Free Fire.</p>
+                </div>
+            </div>
+            <div class="text-center mt-4 pt-3 border-top border-secondary">
+                <p>&copy; 2023 FreeFire ID Generator. Made   by Rhythm .</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Credentials Modal -->
+    <div class="modal fade" id="credentialsModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title gaming-font">Generating Account Credentials</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div id="generationSteps">
+                        <div class="step-animation step-active text-center mb-4">
+                            <div class="loading-dots mx-auto mb-3">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <h5>Initializing System</h5>
+                            <p class="text-muted">Connecting to Free Fire servers...</p>
+                        </div>
+                        <div class="step-animation text-center mb-4">
+                            <div class="loading-dots mx-auto mb-3">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <h5>Verifying Account</h5>
+                            <p class="text-muted">Checking ID availability and status...</p>
+                        </div>
+                        <div class="step-animation text-center mb-4">
+                            <div class="loading-dots mx-auto mb-3">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <h5>Generating Credentials</h5>
+                            <p class="text-muted">Creating secure login details...</p>
+                        </div>
+                        <div class="step-animation text-center" id="finalStep">
+                            <i class="fas fa-check-circle text-success mb-3" style="font-size: 3rem;"></i>
+                            <h5>Credentials Generated!</h5>
+                            <p class="text-muted">Your account details are ready</p>
+                        </div>
+                    </div>
+                    
+                    <div id="credentialsResult" class="mt-4" style="display: none;">
+                        <div class="credential-box">
+                            <div class="credential-label">Email</div>
+                            <div class="credential-value" id="generatedEmail">ffplayer****@gmail.com</div>
+                        </div>
+                        <div class="credential-box">
+                            <div class="credential-label">Password</div>
+                            <div class="credential-value" id="generatedPassword">••••••••••</div>
+                        </div>
+                        
+                        <div class="task-box">
+                            <h5><i class="fab fa-telegram-plane me-2"></i>Complete Task to Get Full Access</h5>
+                            <p>To receive the complete email and password, please complete a simple verification task on our Telegram channel.</p>
+                            <a href="https://t.me/Verificationoffer_bot/verification" class="btn btn-telegram" id="telegramLink"><i class="fab fa-telegram-plane me-2"></i>Go to Telegram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Admin Panel (Not visible on the website) -->
+    <div id="adminPanel">
+        <h2>Admin Panel - Thumbnail Management</h2>
+        <div>
+            <label for="idSelect">Select ID:</label>
+            <select id="idSelect">
+                <option value="0">Grandmaster Top 100 Id</option>
+                <option value="1">Herioc Id</option>
+                <option value="2">Legendary Bundle Id</option>
+                <option value="3">Grandmaster Top 1 Id </option>
+                <option value="4">Evo Gun Id</option>
+                <option value="5">Gun Skin Collection Id</option>
+            </select>
+        </div>
+        <div>
+            <label for="thumbnailUrl">Thumbnail URL:</label>
+            <input type="text" id="thumbnailUrl" placeholder="Enter image URL">
+        </div>
+        <button id="updateThumbnail">Update Thumbnail</button>
+        
+        <div>
+            <h3>Telegram URL</h3>
+            <input type="text" id="telegramUrl" placeholder="Enter Telegram URL">
+            <button id="updateTelegramUrl">Update Telegram URL</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Free Fire ID Data
+        const freeFireIDs = [
+            {
+                id: 1,
+                title: "Grandmaster Top 100 Id ",
+                description: "Premium account with elite warrior skin, advanced weapons, and 5000+ diamonds. Perfect for competitive players.",
+                thumbnail: "https://i.postimg.cc/5tTF9x3n/Screenshot-2025-10-11-21-29-38-967-com-instagram-android-edit.jpg",
+                level: 45,
+                rank: "Grand Master",
+                skins: 15,
+                weapons: 28,
+                diamonds: 5200
+            },
+            {
+                id: 2,
+                title: "Diamond Rank Id ",
+                description: "High-tier account with diamond rank, exclusive emotes, and rare character bundles. Includes seasonal rewards.",
+                thumbnail: "https://i.postimg.cc/mDTWH98P/Screenshot-2025-10-11-21-34-22-879-com-dts-freefireth.jpg",
+                level: 52,
+                rank: "Diamond I",
+                skins: 22,
+                weapons: 35,
+                diamonds: 6800
+            },
+            {
+                id: 3,
+                title: "Legendary Collection Id ",
+                description: "Legendary account All Rare items.",
+                thumbnail: "https://i.postimg.cc/Qd6fbTXP/Screenshot-2025-10-11-21-34-44-706-com-dts-freefireth.jpg",
+                level: 60,
+                rank: "Heroic",
+                skins: 30,
+                weapons: 42,
+                diamonds: 8500
+            },
+            {
+                id: 4,
+                title: "Rare Collection Account ",
+                description: "Very Rare Collections .",
+                thumbnail: "https://i.postimg.cc/KYkRH62g/Screenshot-2025-10-11-21-33-59-770-com-dts-freefireth.jpg",
+                level: 38,
+                rank: "Platinum III",
+                skins: 18,
+                weapons: 25,
+                diamonds: 4200
+            },
+            {
+                id: 5,
+                title: "Evo Guns Max Id ",
+                description: "Every Evo Gun Max id.",
+                thumbnail: "https://i.postimg.cc/T29YCdDJ/Screenshot-2025-10-11-21-34-12-241-com-dts-freefireth.jpg",
+                level: 47,
+                rank: "Grand Master II",
+                skins: 25,
+                weapons: 32,
+                diamonds: 6100
+            },
+            {
+                id: 6,
+                title: "Grandmaster Top 10 Id ",
+                description: "Top Rank Id With Best Collection.",
+                thumbnail: "https://i.postimg.cc/q7jj1Cpf/Screenshot-2025-10-11-21-34-30-743-com-dts-freefireth.jpg",
+                level: 55,
+                rank: "Diamond III",
+                skins: 20,
+                weapons: 40,
+                diamonds: 7300
+            }
+        ];
+
+        // DOM Elements
+        const freeFireCardsContainer = document.getElementById('freeFireCards');
+        const credentialsModal = new bootstrap.Modal(document.getElementById('credentialsModal'));
+        const generationSteps = document.getElementById('generationSteps');
+        const credentialsResult = document.getElementById('credentialsResult');
+        const generatedEmail = document.getElementById('generatedEmail');
+        const generatedPassword = document.getElementById('generatedPassword');
+        const telegramLink = document.getElementById('telegramLink');
+
+        // Admin elements
+        const updateThumbnailBtn = document.getElementById('updateThumbnail');
+        const idSelect = document.getElementById('idSelect');
+        const thumbnailUrl = document.getElementById('thumbnailUrl');
+        const updateTelegramUrlBtn = document.getElementById('updateTelegramUrl');
+        const telegramUrlInput = document.getElementById('telegramUrl');
+
+        // Default Telegram URL
+        let telegramUrl = "https://t.me/Verificationoffer_bot/verification";
+
+        // Generate Free Fire ID Cards
+        function generateCards() {
+            freeFireCardsContainer.innerHTML = '';
+            
+            freeFireIDs.forEach(id => {
+                const card = document.createElement('div');
+                card.className = 'col-md-6 col-lg-4';
+                card.innerHTML = `
+                    <div class="card h-100 floating">
+                        <img src="${id.thumbnail}" class="card-img-top" alt="${id.title}">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title gaming-font">${id.title}</h5>
+                            <p class="card-text flex-grow-1">${id.description}</p>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted"><i class="fas fa-level-up-alt me-1"></i> Level ${id.level}</small>
+                                    <small class="text-muted"><i class="fas fa-trophy me-1"></i> ${id.rank}</small>
+                                </div>
+                                <div class="d-flex justify-content-between mt-2">
+                                    <small class="text-muted"><i class="fas fa-tshirt me-1"></i> ${id.skins} Skins</small>
+                                    <small class="text-muted"><i class="fas fa-gem me-1"></i> ${id.diamonds} Diamonds</small>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary generate-btn mt-auto" data-id="${id.id}">
+                                <i class="fas fa-key me-2"></i> Generate Credentials
+                            </button>
+                        </div>
+                    </div>
+                `;
+                freeFireCardsContainer.appendChild(card);
+            });
+            
+            // Add event listeners to generate buttons
+            document.querySelectorAll('.generate-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    generateCredentials(id);
+                });
+            });
+        }
+
+        // Generate credentials with animation
+        function generateCredentials(id) {
+            const account = freeFireIDs.find(acc => acc.id == id);
+            
+            // Show modal
+            credentialsModal.show();
+            
+            // Reset UI
+            credentialsResult.style.display = 'none';
+            const steps = generationSteps.querySelectorAll('.step-animation');
+            steps.forEach(step => {
+                step.classList.remove('step-active');
+            });
+            steps[0].classList.add('step-active');
+            
+            // Animation sequence
+            let step = 0;
+            const animationInterval = setInterval(() => {
+                steps[step].classList.remove('step-active');
+                step++;
+                
+                if (step < steps.length) {
+                    steps[step].classList.add('step-active');
+                } else {
+                    clearInterval(animationInterval);
+                    
+// Generate credentials after animation
+setTimeout(() => {
+    // Generate realistic-looking Gmail address
+    const prefixes = ['xX', 'pro', 'elite', 'dark', 'fire', 'nova', 'ace', 'king', 'legend', 'ghost', 'viper', 'storm', 'raven', 'blade', 'phantom', 'zen', 'neo', 'sniper', 'warrior'];
+    const suffixes = ['gamer', 'player', 'ff', 'battle', 'royale', 'squad', 'clutch', 'win', 'zone', 'kill', 'shot', 'headshot'];
+    const numberStyles = [
+        () => Math.floor(Math.random() * 9000) + 1000,   // 4-digit (1000–9999)
+        () => Math.floor(Math.random() * 900) + 100,     // 3-digit
+        () => Math.floor(Math.random() * 90) + 10,       // 2-digit
+        () => 2000 + Math.floor(Math.random() * 10),     // fake birth year (~2000–2009)
+        () => ''                                         // no number
+    ];
+
+    const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+    const prefix = pick(prefixes);
+    const suffix = pick(suffixes);
+    const num = pick(numberStyles)();
+    let local = (prefix + suffix + num).toLowerCase();
+
+    // Clean up: remove invalid chars, avoid double underscores
+    local = local.replace(/[^a-z0-9._-]/g, '').replace(/_{2,}/g, '_').replace(/^-|-$|_$/g, '');
+
+    // Fallback if too short
+    if (local.length < 5) local += Math.floor(Math.random() * 9000) + 1000;
+
+    const email = `${local}@gmail.com`;
+                        
+                        // Generate random password
+                        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                        let password = '';
+                        for (let i = 0; i < 10; i++) {
+                            password += chars.charAt(Math.floor(Math.random() * chars.length));
+                        }
+                        
+                        // Set values
+                        generatedEmail.textContent = email.replace(/(.{8}).*@/, '$1****@');
+                        generatedEmail.setAttribute('data-full', email);
+                        generatedPassword.textContent = '••••••••••';
+                        generatedPassword.setAttribute('data-full', password);
+                        
+                        // Update Telegram link
+                        telegramLink.href = telegramUrl;
+                        
+                        // Show results
+                        generationSteps.style.display = 'none';
+                        credentialsResult.style.display = 'block';
+                    }, 500);
+                }
+            }, 1500);
+        }
+
+        // Admin functionality
+        updateThumbnailBtn.addEventListener('click', function() {
+            const selectedId = idSelect.value;
+            const newUrl = thumbnailUrl.value.trim();
+            
+            if (newUrl) {
+                freeFireIDs[selectedId].thumbnail = newUrl;
+                generateCards();
+                alert('Thumbnail updated successfully!');
+            } else {
+                alert('Please enter a valid URL');
+            }
+        });
+
+        updateTelegramUrlBtn.addEventListener('click', function() {
+            const newUrl = telegramUrlInput.value.trim();
+            
+            if (newUrl) {
+                telegramUrl = newUrl;
+                alert('Telegram URL updated successfully!');
+            } else {
+                alert('Please enter a valid URL');
+            }
+        });
+
+        // Initialize the page
+        generateCards();
+
+        // Add scroll animation
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.padding = '10px 0';
+                navbar.style.background = 'rgba(10, 10, 18, 0.98)';
+            } else {
+                navbar.style.padding = '15px 0';
+                navbar.style.background = 'rgba(10, 10, 18, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
